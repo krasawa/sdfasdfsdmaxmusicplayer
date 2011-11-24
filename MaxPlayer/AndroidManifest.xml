@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         
-        <service android:exported="false" android:name=".MusicService">
+        <service android:exported="false" android:name=".controller.MusicService">
             <intent-filter>
                 <action android:name="com.max.player.action.TOGGLE_PLAYBACK" />
                 <action android:name="com.max.player.action.PLAY" />
@@ -37,7 +37,7 @@
             </intent-filter>
         </service>
 
-        <receiver android:name=".MusicIntentReceiver">
+        <receiver android:name=".controller.MusicIntentReceiver">
             <intent-filter>
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
             </intent-filter>

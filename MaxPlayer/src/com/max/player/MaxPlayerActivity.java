@@ -1,5 +1,7 @@
 package com.max.player;
 
+import com.max.player.controller.MusicService;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -22,11 +24,6 @@ public class MaxPlayerActivity extends Activity implements OnClickListener{
 	    Button mStopButton;
 	    Button mEjectButton;
 
-	    /**
-	     * Called when the activity is first created. Here, we simply set the event listeners and
-	     * start the background service ({@link MusicService}) that will handle the actual media
-	     * playback.
-	     */
 	    @Override
 	    public void onCreate(Bundle savedInstanceState) {
 	        super.onCreate(savedInstanceState);
@@ -64,11 +61,6 @@ public class MaxPlayerActivity extends Activity implements OnClickListener{
 	        }
 	    }
 
-	    /** 
-	     * Shows an alert dialog where the user can input a URL. After showing the dialog, if the user
-	     * confirms, sends the appropriate intent to the {@link MusicService} to cause that URL to be
-	     * played.
-	     */
 	    void showUrlDialog() {
 	        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
 	        alertBuilder.setTitle("Manual Input");
